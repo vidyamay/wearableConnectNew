@@ -16,16 +16,17 @@ public class SetHealthData {
     @Path("setHealthInfo")
     @Consumes(MediaType.APPLICATION_JSON)
     @POST
-    public String setHealthInfo(JSONObject inputJObj) {
+    public String setHealthInfo(HealthData inputJObj) {
         System.out.println("Inside setHealthInfo...");
         String userId = null;
         try {
-            userId = (String) inputJObj.get("userId");       
-            System.out.println("userId>> " + userId);
+           // userId = (String) inputJObj.get("userId");       
+            System.out.println("userId>> " + inputJObj.getUserId());
+            System.out.println("userId>> " + inputJObj);
             
             
-        } catch (JSONException e) {
-            System.out.println("Parsing error, wrong input!!");
+        } catch (Exception e) {
+         
             e.printStackTrace();
         }
        
