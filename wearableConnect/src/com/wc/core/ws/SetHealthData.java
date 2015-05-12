@@ -17,6 +17,7 @@ public class SetHealthData {
     @Consumes(MediaType.APPLICATION_JSON)
     @POST
     public String setHealthInfo(JSONObject inputJObj) {
+        System.out.println("Inside setHealthInfo...");
         String userId = null;
         try {
             userId = (String) inputJObj.get("userId");       
@@ -35,7 +36,7 @@ public class SetHealthData {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String getHealthInfo() {
-
+        System.out.println("Inside getHealthInfo...");
         return "<html><body><p>Name=Vidya</p></body></html>";
     }
 
