@@ -19,7 +19,7 @@ public class SetHealthData {
         System.out.println("Inside setHealthInfo...");
         String userId = null;
         try {
-           userId = inputObj.getUserId();       
+            userId = inputObj.getUserId();       
             System.out.println("userId>> " + userId);
             List<DataObject> data = inputObj.getData();
             System.out.println("data len>> " + data.size());
@@ -35,12 +35,13 @@ public class SetHealthData {
         return "<html><body><p>userId: " + userId + "</p></body></html>";
     }
     
+    
     @Path("getHealthInfo")
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String getHealthInfo() {
         System.out.println("Inside getHealthInfo...");
-        return "<html><body><p>Name=Vidya</p></body></html>";
+        return "<html><body><p>Get call is working fine</p></body></html>";
     }
 
 }
