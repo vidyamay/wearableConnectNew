@@ -8,6 +8,17 @@ public class DataObject {
     String deviceName;
     String deviceId;
     
+    public DataObject(){
+        
+    }
+    
+    public DataObject(String dataType,String value,String deviceName, String deviceId){
+       this.dataType = dataType;
+       this.value = value;
+       this.deviceName = deviceName;
+       this.deviceId = deviceId;
+    }
+    
     public String getDataType() {
     
         return dataType;
