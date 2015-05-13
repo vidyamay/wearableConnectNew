@@ -31,8 +31,9 @@ public class SetHealthData {
          
             e.printStackTrace();
         }
-       
-        return "<html><body><p>userId: " + userId + "</p></body></html>";
+       String response =  "{\"userId\":\"" + userId + "\",\"statusCode\":\"200\", \"statusMessage\" : \"Success\"}";
+        //return "<html><body><p>userId: " + userId + "</p></body></html>";
+        return response;
     }
     
     
